@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="utf-8"?>
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+        
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <TableRow
+            android:id="@+id/tableRow1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingBottom="10dp"
+            android:paddingLeft="10dp" >
+
+            <TextView
+                android:id="@+id/txtName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Large Text"
+                android:textAppearance="?android:attr/textAppearanceLarge" />
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/tableRow57"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+             android:paddingLeft="25dp" >
+            
+
+          <TextView
+                android:id="@+id/txtCity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="10dp"
+                android:text="TextView" />
+
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/tableRow2"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:paddingBottom="10dp"
+            android:paddingLeft="25dp" >
+
+            <ImageView
+                android:id="@+id/imageView1"
+                android:layout_width="5dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:adjustViewBounds="true"
+                android:contentDescription="@string/strPhoneIco"
+                android:maxHeight="50dp"
+                android:paddingRight="20dp"
+                android:scaleType="fitStart"
+                android:src="@drawable/phone1" />
+
+            <TextView
+                android:id="@+id/txtPhone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:layout_marginLeft="-50dp"
+                android:autoLink="phone"
+                android:text="TextView" />
+
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/tableRow3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" 
+             android:paddingLeft="25dp" >
+
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="wrap_content"
+                android:layout_gravity="left"
+                android:adjustViewBounds="true"
+                android:contentDescription="@string/strAddressIco"
+                android:maxHeight="50dp"
+                android:paddingRight="20dp"
+                android:scaleType="fitStart"
+                android:src="@drawable/address1" />
+
+            <TextView
+                android:id="@+id/txtAddress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:layout_marginLeft="-50dp"
+                android:autoLink="all"
+                android:text="TextView" />
+
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/tableRow4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+        </TableRow>
+
+
+    
+            <TableRow
+                android:id="@+id/tableRow6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="5dp"
+                android:paddingLeft="15dp" >
+
+                <TextView
+                    android:id="@+id/lblNumRooms"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingRight="10dp"
+                    android:text="@string/strNumRooms"
+                    android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/txtNumRooms"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:text="TextView" />
+
+    </TableRow>
+    
+            <TableRow
+                android:id="@+id/tableRow7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="5dp"
+                android:paddingLeft="15dp" >
+
+                <TextView
+                    android:id="@+id/lblPets"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingRight="10dp"
+                    android:text="@string/strPetsAllowed"
+                    android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/txtPetAllowed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/lblNumRooms"
+        android:layout_below="@+id/lblNumRooms"
+        android:text="TextView" />
+    </TableRow>
+
+            <TableRow
+                android:id="@+id/tableRow8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="5dp"
+                android:paddingLeft="15dp" >
+
+                    <TextView
+                        android:id="@+id/lblPool"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingRight="10dp"
+                        android:text="@string/strPools"
+                        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/txtPool"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/txtPetAllowed"
+        android:layout_below="@+id/txtPetAllowed"
+        android:text="TextView" />
+    </TableRow>
+
+            <TableRow
+                android:id="@+id/tableRow9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="5dp"
+                android:paddingLeft="15dp" >
+
+                    <TextView
+                        android:id="@+id/lblFitness"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingRight="10dp"
+                        android:text="@string/strFitness"
+                        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/txtFitness"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:text="TextView" />
+    </TableRow>
+
+            <TableRow
+                android:id="@+id/tableRow10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="5dp"
+                android:paddingLeft="15dp" >
+
+                    <TextView
+                        android:id="@+id/lblBreakfast"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingRight="10dp"
+                        android:text="@string/strBreakfast"
+                        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/txtBreakfast"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+ 
+        android:text="TextView" />
+    </TableRow>
+    
+            <TableRow
+                android:id="@+id/tableRow11"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="5dp"
+                android:paddingLeft="15dp" >
+
+                <TextView
+                    android:id="@+id/lblInternet"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingRight="10dp"
+                    android:text="@string/strInternet"
+                    android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/txtInternet"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:text="TextView" />
+    </TableRow>
+
+            <TableRow
+                android:id="@+id/tableRow12"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="5dp"
+                android:paddingLeft="15dp" >
+    
+                                <TextView
+                                    android:id="@+id/lblPriceRange"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:paddingRight="10dp"
+                                    android:text="@string/strPriceRange"
+                                    android:textStyle="bold" />
+                
+    <TextView
+        android:id="@+id/txtPriceRange"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:text="TextView" />
+    </TableRow>
+
+
+ </TableLayout>
+</LinearLayout>
