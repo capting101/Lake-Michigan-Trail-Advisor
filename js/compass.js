@@ -1,31 +1,38 @@
-document.addEventListener('deviceready', function(){
-	var watchId = 0;
-	
-	$( '#btnWatch' ).bind( 'touchstart', function(){
-		var options = null;
-		
-		if(watchId == 0 )
-		{
-			//default of 100ms
-			options = {
-				frequency: 100
-			};
-			
-			watchId = navigator.compass.watchHeading( function( heading ) {
-				var rotation = Math.round( heading.magneticHeading ) + 'edeg';
-				
-				$( '#txtHeading' ).attr( 'value', heading.magneticHeading );
-				$( '#imgNeedle' ).css( '-webkit-transform', 'rotate( ' + rotation + ' )' );
-			}, function( error ) {
-				console.log( 'Error' );
-			}, options);
-			
-			$( this ).html( 'Stop Watching' );
-		} else {
-			navigator.compass.clearWatch (watchId );
-			watchId = 0;
-			
-			$( this ).html( 'Watch Heading' );
-		}
-	});
-});
+// ------------------------------------------------------------------------------------------------------ 
+// Compass
+// ------------------------------------------------------------------------------------------------------
+
+// The watch id references the current `watchHeading`
+var watchIDAccelerometer = null;
+
+// Start watching the compass
+//
+function startWatchCompass() {
+
+    // Update compass every 100ms
+    var options = { frequency: 100 };
+
+    watchIDCompass = navigator.compass.watchHeading(onSuccessCompass, onErrorCompass, options);
+}
+
+// Stop watching the compass
+//
+function stopWatchCompass() {
+    if (watchIDCompass) {
+        navigator.compass.clearWatch(watchIDCompass);
+        watchIDCompass = null;
+    }
+}
+
+// onSuccess: Get the current heading
+//
+function onSuccessCompass(heading) {
+    var element = document.getElementById('compass');
+    element.innerHTML = 'Heading: ' + heading.magneticHeading;
+}
+
+// onError: Failed to get the heading
+//
+function onErrorCompass(compassError) {
+    alert('Compass error: ' + compassError.code);
+}
