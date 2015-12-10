@@ -25,4 +25,4 @@ var init = function () {
      });        
     
 };
-$(document).addEventListener("deviceready",init,true);
+$(document).ready(init);
