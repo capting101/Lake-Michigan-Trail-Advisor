@@ -13,7 +13,7 @@ var init = function () {
     });
     // initialize pages when they are displayed
     $('#pageCompass').on('pagebeforeshow', function(event) {
-        alert('Compass started');
+        //alert('Compass started');
         startWatchCompass();
         
     });

@@ -64,6 +64,8 @@
     <gap:plugin name="org.apache.cordova.network-information" />
     <gap:plugin name="org.apache.cordova.splashscreen" />
     <gap:plugin name="org.apache.cordova.vibration" />
+    <plugin name="InAppBrowser" value="org.apache.cordova.InAppBrowser" />
+    <plugin name="InAppBrowser" value="CDVInAppBrowser" />
 
     <!-- Third party plugins -->
     <!-- A list of available plugins are available at https://build.phonegap.com/plugins -->
