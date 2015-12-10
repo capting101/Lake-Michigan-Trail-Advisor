@@ -1,4 +1,3 @@
-
 //Initialize function
 var init = function () {
 
@@ -18,15 +17,19 @@ var init = function () {
         startWatchCompass();
         
     });
+
+    document.addEventListener("exitButton", function() {
+        exitApp(); 
+     });     
+};
     
     // ------------------------------------------------------------------------------------------------------
     // Exit the application via back button event. Note: this works on android, not on ios. Apple doesn't allow exit 
     // ------------------------------------------------------------------------------------------------------
-    document.addEventListener("exitButton", function() {
-        exitApp(); };
     
+                              
 $(document).ready(init);
     
 function onDeviceReady() {
-    alert('Device Ready');
+    
 }
