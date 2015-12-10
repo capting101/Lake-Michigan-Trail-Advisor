@@ -36,3 +36,6 @@ function onSuccessCompass(heading) {
 function onErrorCompass(compassError) {
     alert('Compass error: ' + compassError.code);
 }
+
+
+    

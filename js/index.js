@@ -1,3 +1,4 @@
+
 //Initialize function
 var init = function () {
 
@@ -11,18 +12,21 @@ var init = function () {
     $(function () {
         $("[data-role=panel]").panel().enhanceWithin();
     });
-    
     // initialize pages when they are displayed
     $('#pageCompass').on('pagebeforeshow', function(event) {
+        alert('Compass started');
         startWatchCompass();
+        
     });
     
     // ------------------------------------------------------------------------------------------------------
     // Exit the application via back button event. Note: this works on android, not on ios. Apple doesn't allow exit 
     // ------------------------------------------------------------------------------------------------------
     document.addEventListener("exitButton", function() {
-        exitApp(); 
-     });        
+        exitApp(); };
     
-};
 $(document).ready(init);
+    
+function onDeviceReady() {
+    alert('Device Ready');
+}
