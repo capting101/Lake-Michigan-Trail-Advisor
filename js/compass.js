@@ -29,7 +29,8 @@ function stopWatchCompass() {
 function onSuccessCompass(heading) {
     var textHeading = document.getElementById('compass');
     textHeading.innerHTML = 'Heading: ' + heading.magneticHeading;
-    document.getElementById('APFinderImage').style.transform = "rotate("+heading+"deg)";
+    var aPImage = document.getElementById('APFinderImage')
+    aPImage.css('-webkit-transform', 'rotate('+heading+'deg)');
 }
 
 // onError: Failed to get the heading
