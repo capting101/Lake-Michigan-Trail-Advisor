@@ -74,7 +74,7 @@
 
 .compass-IMG{
 	width:50%;
-	display:none;
+	display:flex;
 	position:relative;
 	float:none;
 	}
