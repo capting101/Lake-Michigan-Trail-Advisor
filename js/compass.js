@@ -27,8 +27,8 @@ function stopWatchCompass() {
 // onSuccess: Get the current heading
 //
 function onSuccessCompass(heading) {
-    var textHeading = document.getElementById('compass');
-    textHeading.innerHTML = 'Magnetic Heading: ' + heading.magneticHeading;
+    //var textHeading = document.getElementById('compass');
+    //textHeading.innerHTML = 'Magnetic Heading: ' + heading.magneticHeading;
     //var aPImage = document.getElementById('apfinderimage')
     //aPImage.css('-webkit-transform', 'rotate('+heading.magneticHeading+'deg)');
     updateCanvas(heading);
