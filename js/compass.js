@@ -43,6 +43,8 @@ function onErrorCompass(compassError) {
 function updateCanvas(heading) {
     var canvas = document.getElementById("compass");
     var context = canvas.getContext("2d");
+    context.width = window.innerWidth;
+    context.height = widnow.innerWidth;
     context.clearRect(0, 0, canvas.width, canvas.height);
     centerX = canvas.width / 2;
     var centerY = canvas.height / 2;
@@ -86,13 +88,14 @@ function updateCanvas(heading) {
     context.fillText("S",centerX-5, 190);
     context.fillText("E",180, centerY+5);                         
     context.fillText("W",23, centerY+8);
+    context.rotate((360-heading.magneticHeading) * Math.PI/180);
     //draw line at required angle
     context.save();
     context.beginPath();
     context.strokeStyle = "red";
     context.translate(centerX, centerY);
     //context.rotate(-180 * Math.PI/180);
-    context.rotate(heading.magneticHeading * Math.PI/180);
+    
     context.lineWidth = 5;
     context.moveTo(0, 0);
     context.lineTo(0, radius-30);
