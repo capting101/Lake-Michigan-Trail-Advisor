@@ -90,7 +90,7 @@ function updateCanvas(heading) {
     context.beginPath();
     context.strokeStyle = "red";
     context.translate(centerX, centerY);
-    context.rotate(-180 * Math.PI/180);
+    //context.rotate(-180 * Math.PI/180);
     context.rotate(heading.magneticHeading * Math.PI/180);
     context.lineWidth = 5;
     context.moveTo(0, 0);
