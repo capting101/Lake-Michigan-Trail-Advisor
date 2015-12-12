@@ -9,8 +9,8 @@ var watchIDAccelerometer = null;
 //
 function startWatchCompass() {
 
-    // Update compass every 500ms
-    var options = { frequency: 500 };
+    // Update compass every 100ms
+    var options = { frequency: 100 };
 
     watchIDCompass = navigator.compass.watchHeading(onSuccessCompass, onErrorCompass, options);
 }
@@ -98,6 +98,7 @@ function updateCanvas(heading) {
     context.stroke();
     context.closePath();
     context.restore();
+    context.clearRect(0, 0, canvas.width, canvas.height);
     }
 
 
