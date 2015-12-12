@@ -43,6 +43,7 @@ function onErrorCompass(compassError) {
 function updateCanvas(heading) {
     var canvas = document.getElementById("compass");
     var context = canvas.getContext("2d");
+    context.clearRect(0, 0, canvas.width, canvas.height);
     centerX = canvas.width / 2;
     var centerY = canvas.height / 2;
     var radius =  100;
@@ -98,7 +99,7 @@ function updateCanvas(heading) {
     context.stroke();
     context.closePath();
     context.restore();
-    context.clearRect(0, 0, canvas.width, canvas.height);
+    
     }
 
 
